@@ -8,7 +8,6 @@ app = Flask(__name__)
 CORS(app)
 
 training_data = pd.read_csv(os.path.join('data', 'auto-mpg-training-data.csv'))
-print(training_data)
 
 
 @app.route("/", methods=["GET"])
