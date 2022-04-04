@@ -1,3 +1,4 @@
+from types import NotImplementedType
 from flask import Flask, Response, request
 from flask_cors import CORS
 import os
@@ -38,8 +39,8 @@ def predict():
     beschleunigung = request.args.get("beschleunigung")
     baujahr = request.args.get("baujahr")
 
-    prediction = trained_model.predict(
-        [[zylinder, ps, gewicht, beschleunigung, baujahr]])
-    print(prediction)
-
-    return{"result": prediction[0]}
+    if(zylinder and ps and gewicht and beschleunigung and baujahr):
+        prediction = trained_model.predict(
+            [[zylinder, ps, gewicht, beschleunigung, baujahr]])
+        return{"result": prediction[0]}
+    return Response('Please provide all neccessary parameters to get a prediction: zylinder, ps gewicht, beschleunigung, baujahr', nimetype='application/json')
