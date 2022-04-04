@@ -40,5 +40,4 @@ def predict():
 
     prediction = trained_model.predict(
         [[zylinder, ps, gewicht, beschleunigung, baujahr]])
-    print(prediction)
-    return ''
+    return{'result': prediction[0]}
