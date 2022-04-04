@@ -2,3 +2,4 @@
 learn-github-action.yml
 model-training.yml
 .pytest_cache
+.github\workflows
