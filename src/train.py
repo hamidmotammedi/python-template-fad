@@ -1,10 +1,8 @@
-# from cgi import test
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 import pickle
 
-from sklearn.multioutput import RegressorChain
 
 # Read csv_file
 data = pd.read_csv('data/auto-mpg-training-data.csv', sep=";")

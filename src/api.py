@@ -17,7 +17,7 @@ file_to_open.close()
 
 @app.route("/", methods=["GET"])
 def index():
-    return {"hello", "World "}
+    return {"hello": "World "}
 
 
 @app.route("/hello_world", methods=["GET"])
@@ -40,4 +40,6 @@ def predict():
 
     prediction = trained_model.predict(
         [[zylinder, ps, gewicht, beschleunigung, baujahr]])
-    return{'result': prediction[0]}
+    print(prediction)
+
+    return{"result": prediction[0]}
