@@ -8,13 +8,13 @@ import pickle
 data = pd.read_csv('data/auto-mpg-training-data.csv', sep=";")
 
 # "class" columns
-y_vatriable = data.loc[:, data.columns != 'mpg']
+y_variable = data['mpg']
 
 # all columns that are not the 'class' columns -> all columns that contain the attributes
 x_variables = data.loc[:, data.columns != 'mpg']
 
 x_train, x_test, y_train, y_test = train_test_split(
-    x_variables, y_vatriable, test_size=0.2)
+    x_variables, y_variable, test_size=0.2)
 
 regressor = LinearRegression()
 
