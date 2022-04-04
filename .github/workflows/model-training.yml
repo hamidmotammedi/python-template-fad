@@ -2,7 +2,7 @@ name: model-training
 on: [push]
 jobs:
   train-model:
-    runs-on: windows
+    runs-on:  ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
