@@ -5,7 +5,9 @@ import pickle
 
 file_to_open = open("data/models/baummethoden_lr.pickle")
 trained_model = pickle.load(file_to_open)
+
 file_to_open.close()
+
 
 # load data that we want predictions for
 
