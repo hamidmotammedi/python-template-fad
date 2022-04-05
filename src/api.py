@@ -1,4 +1,4 @@
-from types import NotImplementedType
+# from types import NotImplementedType
 from flask import Flask, Response, request
 from flask_cors import CORS
 import os
@@ -43,4 +43,4 @@ def predict():
         prediction = trained_model.predict(
             [[zylinder, ps, gewicht, beschleunigung, baujahr]])
         return{"result": prediction[0]}
-    return Response('Please provide all neccessary parameters to get a prediction: zylinder, ps, gewicht, beschleunigung, baujahr', minetype='application/json')
+    return Response('No all neccessary parameters to get Prediction:', minetype='application/json')
